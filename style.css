@@ -1,22 +1,37 @@
 main {
   background-color: aqua;
 }
+
 .container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .standBack {
   height: 300px;
   width: 700px;
   background-color: blueviolet;
-  justify-content: center;
+
 }
-.bacFleurs {
-  height: 100px;
-  width: 200px;
-  background-color: deeppink;
+
+@media (max-width:500px) {
+  .standBack {
+    height: 200px;
+    width: 400px;
+  }
 }
+
 .customer {
   height: 200px;
   width: 300px;
   background-color: chocolate;
+}
+
+@media (max-width:500px) {
+  .customer {
+    height: 150px;
+    width: 245px;
+  }
 }
