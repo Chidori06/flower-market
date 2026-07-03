@@ -27,8 +27,8 @@ const nameFlower = document.getElementById("flowerName");
 const balisePrix = document.getElementById("price");
 
 //Aléatoire pour fleurs et prix
-const aleaFleur = Math.floor(Math.random() * flowerList.length);
-const finalFlower = flowerList[aleaFleur];
+let aleaFleur = Math.floor(Math.random() * flowerList.length);
+let finalFlower = flowerList[aleaFleur];
 
 //Données fleurs
 nameFlower.innerText = finalFlower.nom;
@@ -37,3 +37,36 @@ balisePrix.style.textAlign = "center";
 divBackground.style.backgroundColor = finalFlower.couleur;
 divBackground.style.padding = "20px";
 divBackground.style.marginTop = "20px";
+
+//Variable client
+const divCustomer = document.getElementById("customer");
+const divTotal = document.getElementById("totalClient");
+const bank = {argent : 0};
+const afficheBanque = document.getElementById("banque");
+
+//Fonction générer un client et calculer le prix de la transaction
+function generateClientAuto() {
+        let timesRun = 0;
+        const intervalID = setInterval(() => {
+            timesRun++;
+            console.log(`Exécution numéro : ${timesRun}`);    
+        const fleurClient = Math.floor(Math.random() * (10)+1);
+        divCustomer.innerHTML = `<p>Bonjour, je souhaiterais ${fleurClient} ${finalFlower.nom}, s'il vous plaît !</p>`;
+        const Total = finalFlower.prix * fleurClient;
+        divTotal.textContent = `Total : ${Total.toFixed(2).replace('.',',')} €`;
+        console.log(divTotal);
+        const totalBank = bank.argent += Total;
+        afficheBanque.textContent = `${totalBank.toFixed(2).replace('.',',')}`;
+        
+            // On s'arrête QUAND on a atteint 10 exécutions
+            if (timesRun >= 10) {
+                clearInterval(intervalID);
+                console.log("L'intervalle est arrêté !");
+            }
+        }, 3000);
+        
+    };
+
+generateClientAuto();
+
+
