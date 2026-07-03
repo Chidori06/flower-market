@@ -37,3 +37,20 @@ balisePrix.style.textAlign = "center";
 divBackground.style.backgroundColor = finalFlower.couleur;
 divBackground.style.padding = "20px";
 divBackground.style.marginTop = "20px";
+
+//Variable client
+const divCustomer = document.getElementById("customer");
+const divTotal = document.getElementById("totalClient");
+
+//Fonction générer un client
+function generateClientAuto() {
+    const fleurClient = Math.floor(Math.random() * (1, 10));
+    divCustomer.innerHTML = `<p>Bonjour, je souhaiterais ${fleurClient} ${finalFlower.nom}, s'il vous plaît !</p>`;
+    const Total = finalFlower.prix * fleurClient;
+    divTotal.textContent = `Total : ${Total}€`;
+    console.log(divTotal);
+}
+generateClientAuto();
+//timer pour client
+//setInterval(generateClientAuto, 10000);
+
