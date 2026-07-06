@@ -36,7 +36,7 @@ Puis, nous avons amélioré le modèle en ajoutant:
 - un bouton pour initialiser ou réinitialiser une journée.
 - une phrase représentant les envies du client.
 
-![version 1](img/capture3.webp)
+![version 1](img/capture3.webp)  
 
 ## Fonctionnalités à ajouter:
 - plusieurs choix de fleurs simultanés
