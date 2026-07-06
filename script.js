@@ -17,10 +17,10 @@ let clientTimeout;
 
 // Liste des météos dispos
 const intemperies = [
-    { temps: "Soleil", imgSrcStand: 'img/photo_stand.png', imgBg : "URL('img/fond_soleil.jpg')"},
-    { temps: "Orage", imgSrcStand: 'img/photo_stand_orage.png', imgBg : "URL('img/fond_orage.jpg')"},
-    { temps: "Neige", imgSrcStand: 'img/photo_stand_neige.png', imgBg : "URL('img/fond_neige.jpg')"},
-    { temps: "Pluie", imgSrcStand: 'img/photo_stand_pluie.png', imgBg : "URL('img/fond_pluie.png')"}
+    { temps: "Soleil", imgSrcStand: 'img/photo_stand.png', imgBg: "URL('img/fond_soleil.jpg')" },
+    { temps: "Orage", imgSrcStand: 'img/photo_stand_orage.png', imgBg: "URL('img/fond_orage.jpg')" },
+    { temps: "Neige", imgSrcStand: 'img/photo_stand_neige.png', imgBg: "URL('img/fond_neige.jpg')" },
+    { temps: "Pluie", imgSrcStand: 'img/photo_stand_pluie.png', imgBg: "URL('img/fond_pluie.png')" }
 ];
 
 //Liste des fleurs dispos
@@ -75,7 +75,6 @@ function generateClientAuto() {
     const Total = finalFlower.prix * fleurClient;
     //Montre le total
     divTotal.textContent = `Total : ${Total.toFixed(2).replace('.', ',')} €`;
-    console.log(divTotal);
     //Ajoute l'argent dans la caisse
     const totalBank = bank.argent += Total;
     afficheBanque.textContent = `${totalBank.toFixed(2).replace('.', ',')}`;
