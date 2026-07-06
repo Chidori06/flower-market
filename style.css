@@ -14,8 +14,16 @@ body {
   padding: 20px;
   display: flex;
   justify-content: center;
-
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+@media (max-width: 500px){
+body{
+  background-repeat: repeat;
+}
+}
+
 
 /* Container */
 .container {
