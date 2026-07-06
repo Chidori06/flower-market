@@ -17,10 +17,10 @@ let clientTimeout;
 
 // Liste des météos dispos
 const intemperies = [
-    { temps: "Soleil", imgSrcStand: 'img/photo_stand.png' },
-    { temps: "Nuages", imgSrcStand: 'img/photo_stand_orage.png' },
-    { temps: "Neige", imgSrcStand: 'img/photo_stand_neige.png' },
-    { temps: "Pluie", imgSrcStand: 'img/photo_stand_pluie.png' }
+    { temps: "Soleil", imgSrcStand: 'img/photo_stand.png', imgBg : "URL('img/fond_soleil.jpg')"},
+    { temps: "Orage", imgSrcStand: 'img/photo_stand_orage.png', imgBg : "URL('img/fond_orage.jpg')"},
+    { temps: "Neige", imgSrcStand: 'img/photo_stand_neige.png', imgBg : "URL('img/fond_neige.jpg')"},
+    { temps: "Pluie", imgSrcStand: 'img/photo_stand_pluie.png', imgBg : "URL('img/fond_pluie.png')"}
 ];
 
 //Liste des fleurs dispos
@@ -42,6 +42,7 @@ function getRandomInt(min, max) {
 function randomizeWeather() {
     const meteoAleatoire = intemperies[getRandomInt(0, intemperies.length - 1)];
     standChange.src = meteoAleatoire.imgSrcStand;
+    document.body.style.backgroundImage = meteoAleatoire.imgBg;
 }
 
 
