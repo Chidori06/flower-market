@@ -36,3 +36,14 @@ Puis, nous avons amélioré le modèle en ajoutant:
 - un bouton pour initialiser ou réinitialiser une journée.
 - une phrase représentant les envies du client.
 
+![version 1](img/capture3.webp)
+
+## Fonctionnalités à ajouter:
+- plusieurs choix de fleurs simultanés
+- dépenser l'argent accumulé dans des investissements (approvisionnement de nouvelles espèces de fleurs, améliorations du magasin)
+- animations (avatar d'un client)
+- images pour les fleurs
+- intempéries variables au cours d'une journée
+- promotions au cours de la journée
+- transformer le timer en horaires "réels"
+- faire varier l'afflux de clients en fonction des intempéries.
